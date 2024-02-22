@@ -11,13 +11,13 @@ This program allows the user to enter an integer value that the program will add
    
 2. The special condition only happens with 11, 12, and 13.
 
-3. By using if loops and coding ```bash n%10== ```, I can extract the important digit for adding a suffix.
+3. By using if loops and coding ``` n%10== ```, I can extract the important digit for adding a suffix.
 
-4. All together I have three ```bash if ```, 3 ```bash else ```, and one ```bash else if ``` branches. Of which, my first "if" statement cascades to an "else if" and "else" branches. From there, the "else" branch cascades into an "if" and another "else" branch. Finally, this "else" branch cascades into my final "if" and "else" branches. 
+4. All together I have three ``` if ```, 3 ``` else ```, and one ``` else if ``` branches. Of which, my first "if" statement cascades to an "else if" and "else" branches. From there, the "else" branch cascades into an "if" and another "else" branch. Finally, this "else" branch cascades into my final "if" and "else" branches. 
 
 5. To allow entering a "yes" or a "y" response, I would use a while loop that allows for cin to be both "yes" and "y".
 
-6. By writing ```bash y=toupper(y) ``` after the ```bash cin>>y ``` statement, a user can type in either "y" or "Y" for a yes response. 
+6. By writing ``` y=toupper(y) ``` after the ``` cin>>y ``` statement, a user can type in either "y" or "Y" for a yes response. 
 
 7. No, I only have branches in my code.
 

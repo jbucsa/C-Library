@@ -18,7 +18,7 @@ time_minutes =< 9, cout<<" ( "<<0.time_minutes<<")\\n"
    
 3. The informations brings with the initial input in hr1, min1, hr2, and min2. From there the two times are stored in "totalminutes1" and "totalminutes2". "Time" variable then holds both "totalminutes1" and "totalminutes2". The follow void statement converts the two times from hours and minutes to minutes only. The new times in minutes are stored in  "totalminutes1" and "totalminutes2", respectively. The last void statement now take the new times and calculate the difference of the two times and stores it under "time". The resulting solution  is displayed on the screen. 
    
-4. By coding in a ```bash srand(time(NULL)) ``` statement, the program can print a random message at the end of every run.
+4. By coding in a ``` srand(time(NULL)) ``` statement, the program can print a random message at the end of every run.
    
 This program is written in C++.
 

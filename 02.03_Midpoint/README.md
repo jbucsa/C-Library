@@ -10,7 +10,7 @@ This program allows the user to input to point in x, and y coordinates. It then 
 
 1. I have in total 12 arguments. 5 being chars and 7 being doubles.
    
-2. I named the ```bash char ``` arguments: ```bash \CocoaLigature0 parenthesis_1, comma, parenthesis_2,  position_1, ``` and ```bash position_2 ```. The double arguments are: ```bash x_1, x_2, y_1, y_2, midpoint_x, midpoint_y, ``` and ```bash distance ```. Since the argument names are never displayed on the screen, there is not real need to give significant to what one names their arguments. The argument names just need to  stay consistent throughout the program code.
+2. I named the ``` char ``` arguments: ``` \CocoaLigature0 parenthesis_1, comma, parenthesis_2,  position_1, ``` and ``` position_2 ```. The double arguments are: ``` x_1, x_2, y_1, y_2, midpoint_x, midpoint_y, ``` and ``` distance ```. Since the argument names are never displayed on the screen, there is not real need to give significant to what one names their arguments. The argument names just need to  stay consistent throughout the program code.
    
 3.  The function returns the midpoint in x and y coordinates. The data type of which is a char.
    

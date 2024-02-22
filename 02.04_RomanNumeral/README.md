@@ -22,8 +22,8 @@ This program converts whole integer numbers inputs into Roman numerals outputs o
 
 7. Roman numeral are still used every around the world. Plus, Latin is still used today because of the importance the Roman empire was to the creation of civilization. For that fact, it'll always be important to know.
    
-8.  This can be done by just making a loop were both the "y" and "yes" are options for cin that give the same cout, i.e.: ```bash \f1\fs20 \CocoaLigature0 ``` ```bash if (strcmp(status, "yes")!=0 && strcmp(status, "y")!=0) ```
-```bash \f0\fs24 \CocoaLigature1 ```
+8.  This can be done by just making a loop were both the "y" and "yes" are options for cin that give the same cout, i.e.: ``` \f1\fs20 \CocoaLigature0 ``` ``` if (strcmp(status, "yes")!=0 && strcmp(status, "y")!=0) ```
+``` \f0\fs24 \CocoaLigature1 ```
 
 9. Using the cstd library, and writing myUpper and/or myLower after the "yes" or "y" statement will allow for the lower and upper case "y" to be input.
 
