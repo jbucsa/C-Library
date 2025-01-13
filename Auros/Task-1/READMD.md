@@ -39,7 +39,7 @@ the function should return 4, as there is a path 0 -> 2 -> 3 -> 8. City number 3
 1. Given T = [0, 0, 0, 1, 6, 1, 0, 0],
 
 <!-- Insert Images of Roadmap Example 2 -->
-<img src="Images/002_RoadNetworkExample02_Image.pngg" alt="Road Network Example 02" width="300" height="200">
+<img src="Images/002_RoadNetworkExample02_Image.png" alt="Road Network Example 02" width="300" height="200">
 
 the function should return 3, as there is a path 0 -> 6 -> 4. There are no cities that require a ticket on the path.
 
