@@ -29,7 +29,7 @@ that given the matrix A, returns the minimum number of moves needed to place one
 
 1. Given A = [[0, 6, 0], [2, 0, 0], [0, 1, 0]], the function should return 9.
 
-<img src="Images/003_ExampleThreeGrid.png
+<img src="Images/003_ExampleThreeGrid.png" alt="Example Three Grid" width="300" height="300">
 
 
 ### Solution
