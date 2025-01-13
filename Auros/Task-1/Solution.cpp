@@ -1,48 +1,50 @@
 #include <vector>
 #include <iostream>
-#include <cmath>
+#include <unordered_map>
+#include <queue>
+#include <unordered_set>
 
 using namespace std;
 
-int solution(vector<vector<int>> &A) {
-    struct Cell {
-        int index, excess;
-    };
+int solution(vector<int> &T) {
+    int N = T.size();
+    if (N == 1) return 1; // If there's only one city, Jack can visit it.
 
-    vector<Cell> excess_cells, deficit_cells;
-    int moves = 0;
+    unordered_map<int, vector<int>> graph;
 
-    // Flatten 3x3 grid into a 1D array and track excess/deficit positions
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            int index = i * 3 + j;  // Convert 2D index to 1D
-            int excess = A[i][j] - 1;
+    // Construct adjacency list representation of the tree
+    for (int i = 1; i < N; ++i) {
+        graph[T[i]].push_back(i);
+        graph[i].push_back(T[i]);
+    }
 
-            if (excess > 0) {
-                excess_cells.push_back({index, excess});
-            } else if (excess < 0) {
-                deficit_cells.push_back({index, -excess});
+    queue<pair<int, bool>> q;  // {city, has_used_ticket}
+    unordered_set<int> visited; 
+    
+    q.push(make_pair(0, false));
+    visited.insert(0);
+    
+    int max_cities = 0;
+
+    while (!q.empty()) {
+        pair<int, bool> current = q.front();  // Extract manually
+        q.pop();
+        int city = current.first;
+        bool used_ticket = current.second;
+
+        max_cities++; // Count the visited city
+
+        for (int neighbor : graph[city]) {
+            if (visited.find(neighbor) == visited.end()) {  // Not visited yet
+                bool is_odd = (neighbor % 2 == 1);
+                
+                if (!is_odd || !used_ticket) { // Can visit if even OR first odd city
+                    q.push(make_pair(neighbor, used_ticket || is_odd));
+                    visited.insert(neighbor);
+                }
             }
         }
     }
 
-    // Two-pointer approach to optimally pair excess with deficit
-    size_t i = 0, j = 0;
-    while (i < excess_cells.size() && j < deficit_cells.size()) {
-        int transfer = min(excess_cells[i].excess, deficit_cells[j].excess);
-
-        // Calculate Manhattan distance for movement
-        int row1 = excess_cells[i].index / 3, col1 = excess_cells[i].index % 3;
-        int row2 = deficit_cells[j].index / 3, col2 = deficit_cells[j].index % 3;
-        moves += transfer * (abs(row1 - row2) + abs(col1 - col2));
-
-        // Update remaining excess/deficit
-        excess_cells[i].excess -= transfer;
-        deficit_cells[j].excess -= transfer;
-
-        if (excess_cells[i].excess == 0) i++;
-        if (deficit_cells[j].excess == 0) j++;
-    }
-
-    return moves;
+    return max_cities;  // Ensure the function always returns a value
 }
